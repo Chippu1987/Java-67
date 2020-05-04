@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.tempuri.ConverterLocator"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
-    <fullyQualifiedTypeName name="com.w3schools.www.xml.TempConvertLocator"/>
-    <fullyQualifiedTypeName name="com.w3schools.www.xml.TempConvertSoap"/>
-    <fullyQualifiedTypeName name="javax.ws.rs.Path"/>
-    <fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
-</qualifiedTypeNameHistroy>
