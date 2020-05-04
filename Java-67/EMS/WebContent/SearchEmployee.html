@@ -1,0 +1,86 @@
+<html>
+<head>  
+<style>  
+table
+{
+ background-color:#cccccc;
+ font-family: Verdana;
+ font-size:22px;
+ width:450px;
+ margin:50px auto;
+ background:linear-gradient(to right, coral,yellow,coral);
+ padding:10px;
+ border:2px solid black;
+ border-radius:15px; 
+}
+table tr td,input
+{
+ font-size:20px;   
+}
+table tr
+{
+ height:40px;   
+}
+</style>
+
+<script type="text/javascript">
+let xhr=null;
+function details(no)
+{
+ if(window.XMLHttpRequest)
+	 xhr = new XMLHttpRequest(); //for IE7+, forefox, chrome, safari ...
+ else
+	 xhr = new ActiveXObject("Microsoft.XMLHTTP"); //for IE5, IE6
+ 
+ xhr.open("GET","search?eno="+no, true);
+ xhr.onreadystatechange=fun;
+ xhr.send();
+}
+
+function fun()
+{ 
+ //alert('XHR State = '+ xhr.readyState)
+ if(xhr.readyState==4 && xhr.status==200)
+ {
+    let name_region = document.getElementById('name')
+	let sal_region = document.getElementById('sal') 
+  	let response = xhr.responseText
+  	//alert(response)
+  	
+  	if(response.length>0)
+	{
+  	 let data = JSON.parse(response)
+  	 name_region.innerHTML = data.name
+  	 sal_region.innerHTML = data.sal
+  	}
+  	else
+  	{
+      name_region.innerHTML='NO MATCH'
+      sal_region.innerHTML='NO MATCH'
+  	}	
+ }
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+ <th colspan="2">EDUREKA | MIS | SEARCH </th>        
+</tr>    
+<tr>
+ <td width="30%">EMP NO</td>        
+ <td>
+  <input type=text name="eno" size=30 onblur="details(this.value)">
+ </td> 
+</tr>     
+<tr>
+ <td>NAME</td>        
+ <td><span id="name"/></td> 
+</tr>    
+<tr>
+ <td>SALARY</td>        
+ <td><span id="sal"/></td> 
+</tr>     
+</table>    
+</body>
+</html>

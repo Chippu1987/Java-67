@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="acc" class="co.edureka.Account">
+	  <property name="acno" value="10020123"/>
+	  <property name="name" value="Sunil Joseph"></property>
+	  <property name="bal" value="25000"></property>
+	</bean>
+	
+	<bean id="sunil" parent="acc" class="co.edureka.SavingsAccount">
+	  <property name="interest" value="4.5"/>
+	</bean>
+	
+	<bean id="fn" class="java.lang.String">
+	 <constructor-arg value="Sunil"></constructor-arg>
+	</bean>
+	
+	<bean id="stud1" class="co.edureka.Student">
+	 <property name="firstName" ref="fn"></property>
+	</bean>
+	
+	<bean id="stud2" parent="stud1">	 
+	 <property name="lastName" value="Joseph"></property>
+	</bean>	
+</beans>

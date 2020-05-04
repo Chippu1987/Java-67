@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="https://www.w3schools.com/xml/tempconvert.asmx?wsdl"/>
+		<item value="http://currencyconverter.kowabunga.net/converter.asmx?wsdl"/>
+		<item value="http://localhost:65535/Provider/services/Nums?wsdl"/>
+	</list>
+</section>

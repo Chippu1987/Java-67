@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="acc" class="co.edureka.Account">
+	  <property name="acno" value="10020123"/>
+	  <property name="name" value="Sunil Joseph"></property>
+	  <property name="bal" value="25000"></property>
+	</bean>
+	
+	<bean id="sunil" parent="acc">
+	  
+	</bean>
+</beans>
